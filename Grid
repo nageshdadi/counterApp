@@ -1,0 +1,59 @@
+import { Component } from 'react'
+
+
+
+class Grid extends Component {
+
+    state = {
+        GridDataList: []
+    }
+
+    componentDidMount() {
+        this.getData()
+    }
+
+    getData = async () => {
+
+        const url = 'https://gorest.co.in/public/v1/todos'
+
+        const response = await fetch(url)
+
+        if (response.ok) {
+            const responseData = await response.json()
+
+            const newDataList = responseData.data.map((eachData) => {
+                return (
+                    {
+                        id: eachData.id,
+                        dueOn: eachData.due_on,
+                        status: eachData.status,
+                        title: eachData.title,
+                        userId: eachData.user_id
+                    }
+                )
+            })
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+    render() {
+        const { GridDataList } = this.state
+        return (
+            <div className='grid-container'>
+                <h1>Grid</h1>
+            </div>
+        )
+    }
+
+}
+
+export default Grid
