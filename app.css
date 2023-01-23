@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.conter-container {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conter-head {
+  color: #ffffff;
+}
+
+.conter-card {
+  display: flex;
+}
+
+.btnMinus {
+  border: none;
+  background-color: transparent;
+  margin-left: 20px;
+}
+
+.btnPlus {
+  border: none;
+  background-color: transparent;
+  margin-left: 20px;
+}
+
+.count-num {
+  margin-left: 20px;
+  color: #ffffff;
+}
