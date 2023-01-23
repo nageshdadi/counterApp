@@ -1,0 +1,41 @@
+import { useState } from 'react'
+
+
+import { AiOutlineMinusSquare, AiOutlinePlusSquare } from 'react-icons/ai'
+import './App.css';
+
+const App = () => {
+
+  const [count, setCount] = useState(0)
+
+
+  const onClickMinus = () => {
+    setCount(count - 3)
+  }
+
+  const onClickPlus = () => {
+    setCount(count + 3)
+  }
+
+
+
+  return (
+    <div className="App">
+      <div className='conter-container'>
+        <h1 className='conter-head'>Counter</h1>
+        <div className='conter-card'>
+          <button type='button' className='btnMinus' onClick={onClickMinus}>
+            <AiOutlineMinusSquare />
+          </button>
+          <h1 className='count-num'>{count}</h1>
+          <button type='button' className='btnPlus' onClick={onClickPlus}>
+            <AiOutlinePlusSquare />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+}
+
+export default App;
